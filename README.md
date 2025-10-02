@@ -8,6 +8,8 @@
 
 1.2.0 Adds caching via caching tags.
 
+1.3.0 Explains the usage of DataHandler via symfony commands.
+
 ## Installation
 
 Add via composer:

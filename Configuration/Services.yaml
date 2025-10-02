@@ -6,3 +6,10 @@ services:
 
   Passionweb\DataHandler\:
     resource: "../Classes/*"
+
+  Passionweb\DataHandler\Command\AddContentElement:
+    tags:
+      -   name: 'console.command'
+          command: 'datahandler:contentelement'
+          description: 'Add a content element to a page'
+          schedulable: false
