@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:data_handler/Resources/Private/Language/locallang_db.xlf" date="2024-10-02T11:20:00Z" product-name="data_handler">
+        <header/>
+        <body>
+            <trans-unit id="tx_data_handler_domain_model_codebreak.title">
+                <source>Codebreak</source>
+            </trans-unit>
+            <trans-unit id="tx_data_handler_domain_model_codebreak.codebreak_title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_data_handler_domain_model_codebreak.codebreak_description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_data_handler_domain_model_codebreak.codebreak_link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="plugin.data_handler">
+                <source>Data Handler Plugin</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -6,6 +6,8 @@
 
 1.1.0 Shows basic example operations with DataHandler.
 
+1.2.0 Adds caching via caching tags.
+
 ## Installation
 
 Add via composer:
