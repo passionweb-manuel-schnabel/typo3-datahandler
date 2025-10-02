@@ -1,0 +1,30 @@
+{
+  "name": "passionweb/data-handler",
+  "description": "",
+  "type": "typo3-cms-extension",
+  "minimum-stability": "stable",
+  "version": "1.0.0",
+  "homepage": "https://www.passionweb.de",
+  "authors": [
+    {
+      "name": "Manuel Schnabel",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^13.4",
+    "typo3/cms-backend": "^13.4",
+    "typo3/cms-beuser": "^13.4"
+  },
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Passionweb\\DataHandler\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "data_handler"
+    }
+  }
+}
