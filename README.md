@@ -4,6 +4,8 @@
 
 1.0.0 Explains the general usage of the DataHandler API in TYPO3.
 
+1.1.0 Shows basic example operations with DataHandler.
+
 ## Installation
 
 Add via composer:
