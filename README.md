@@ -10,6 +10,8 @@
 
 1.3.0 Explains the usage of DataHandler via symfony commands.
 
+1.4.0 Adds an example datahandler hook
+
 ## Installation
 
 Add via composer:
