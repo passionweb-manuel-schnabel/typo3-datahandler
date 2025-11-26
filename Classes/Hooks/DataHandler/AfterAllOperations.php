@@ -15,21 +15,38 @@ class AfterAllOperations
 {
     public function processDatamap_afterAllOperations(DataHandler $dataHandler): void
     {
-        $output = null;
-        $result_code = null;
-        $cmd = getcwd();
-        exec("../bin/typo3 cache:flush", $output, $result_code);
-
-        $message = GeneralUtility::makeInstance(
-            FlashMessage::class,
-            "Operations finished",
-            "Cache flushed with Status ".$result_code.".\n",
-            ContextualFeedbackSeverity::INFO,
-            true
-        );
+        $message = "";
+        if(array_key_exists('tt_content', $dataHandler->datamap)){
+            $message = GeneralUtility::makeInstance(
+                FlashMessage::class,
+                "Working with Content Element...",
+                "Debug Info",
+                ContextualFeedbackSeverity::WARNING,
+                true
+            );
+        }
+        else if(array_key_exists('recordPidsForDeletedRecords', $dataHandler->datamap)){
+            $message = GeneralUtility::makeInstance(
+                FlashMessage::class,
+                "Deleting Records...",
+                "Debug Info",
+                ContextualFeedbackSeverity::WARNING,
+                true
+            );
+        }
+        else if(!empty($dataHandler->cmdmap)){
+            $message = GeneralUtility::makeInstance(
+                FlashMessage::class,
+                "Processing cmdmap...",
+                "Debug Info",
+                ContextualFeedbackSeverity::WARNING,
+                true
+            );
+        }
 
         $flashMessageService = GeneralUtility::makeInstance(FlashMessageService::class);
-        $messageQueue = $flashMessageService->getMessageQueueByIdentifier(FlashMessageQueue::NOTIFICATION_QUEUE);
-        $messageQueue->enqueue($message);
+        $messageQueue = $flashMessageService->getMessageQueueByIdentifier();
+        $messageQueue->addMessage($message);
+
     }
 }
