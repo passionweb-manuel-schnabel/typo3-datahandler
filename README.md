@@ -12,6 +12,8 @@
 
 1.4.0 Adds an example datahandler hook
 
+1.5.0 Sample integration of processDatamap_beforeStart hook
+
 ## Installation
 
 Add via composer:
