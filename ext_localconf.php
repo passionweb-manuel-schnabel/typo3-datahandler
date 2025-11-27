@@ -26,4 +26,6 @@ ExtensionUtility::configurePlugin(
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']['BeforeStart'] =
     \Passionweb\DataHandler\Hooks\DataHandler\ProcessDatamap\BeforeStartHook::class;
 
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']['PreProcessFieldArray'] =
+    \Passionweb\DataHandler\Hooks\DataHandler\ProcessDatamap\PreProcessFieldArrayHook::class;
 

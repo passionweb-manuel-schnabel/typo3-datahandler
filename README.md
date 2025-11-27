@@ -14,6 +14,8 @@
 
 1.5.0 Sample integration of processDatamap_beforeStart hook
 
+1.6.0 Sample integration of processDatamap_preProcessFieldArray hook
+
 ## Installation
 
 Add via composer:
