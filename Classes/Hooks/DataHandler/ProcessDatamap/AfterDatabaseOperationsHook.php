@@ -15,7 +15,7 @@ class AfterDatabaseOperationsHook
 {
     /**
      * The hook "processDatamap_afterDatabaseOperations" will be called in vendor/typo3/cms-core/Classes/DataHandling/DataHandler.php
-     * line 715 (TYPO3 13.4.20), look at processDatamap_afterDatabaseOperations
+     * line 629 (TYPO3 13.4.20), look at processDatamap_afterDatabaseOperations
      */
     public function processDatamap_afterDatabaseOperations(string $status, string $table, string $id, array $fieldArray): void
     {
