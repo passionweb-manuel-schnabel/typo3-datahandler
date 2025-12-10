@@ -16,9 +16,7 @@
 
 1.6.0 Sample integration of processDatamap_preProcessFieldArray hook
 
-1.7.0 Sample integration of processDatamap_afterDatabaseOperations hook
-
-1.8.0 Sample integration of processDatamap_afterAllOperations hook
+1.7.0 Sample integration of processDatamap_postProcessFieldArray hook
 
 ## Installation
 
