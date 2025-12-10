@@ -14,8 +14,8 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class CheckRecordUpdateAccess
 {
     /**
-     * The hook "processDatamap_afterAllOperations" will be called in vendor/typo3/cms-core/Classes/DataHandling/DataHandler.php
-     * line 993 (TYPO3 13.4.20), look at processDatamap_afterAllOperations
+     * The hook "checkRecordUpdateAccess" will be called in vendor/typo3/cms-core/Classes/DataHandling/DataHandler.php
+     * line 880 (TYPO3 13.4.20), look at checkRecordUpdateAccess
      */
     public function checkRecordUpdateAccess(string $table, string $id, array &$incomingFieldArray, &$recordAccess, DataHandler $dataHandler): null | \Exception
     {
