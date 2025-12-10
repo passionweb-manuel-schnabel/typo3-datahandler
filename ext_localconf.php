@@ -34,3 +34,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['proc
 
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']['CheckRecordUpdateAccess'] =
     \Passionweb\DataHandler\Hooks\DataHandler\ProcessDatamap\CheckRecordUpdateAccess::class;
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']['AfterAllOperations'] =
+    \Passionweb\DataHandler\Hooks\DataHandler\ProcessDatamap\AfterAllOperationsHook::class;

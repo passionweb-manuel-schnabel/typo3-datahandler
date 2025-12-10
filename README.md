@@ -22,6 +22,8 @@
 
 1.9.0 Sample integration of checkRecordUpdateAccess hook
 
+1.10.0 Sample integration of processDatamap_afterAllOperations hook
+
 ## Installation
 
 Add via composer:
