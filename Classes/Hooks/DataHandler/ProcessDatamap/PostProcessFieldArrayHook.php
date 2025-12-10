@@ -25,7 +25,7 @@ class PostProcessFieldArrayHook
 
             } else if ($status === 'new') {
                 $mstring = "Inserting new Codebreak.";
-                if (str_contains($fieldArray['description'], "Codebreak") || strlen($fieldArray['description']) < 20) {
+                if (str_contains($fieldArray['description'], "Codebreak") && strlen($fieldArray['description']) > 20) {
                     $m = $this->generateInfoMessage($mstring);
                 } else {
                     $m = $this->generateInfoMessage($mstring . " Please provide a informative, Codebreak related description");
