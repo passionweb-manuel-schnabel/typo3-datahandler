@@ -20,7 +20,9 @@
 
 1.8.0 Sample integration of processDatamap_afterDatabaseOperations hook
 
-1.9.0 Sample integration of processDatamap_checkRecordUpdateAccess hook
+1.9.0 Sample integration of checkRecordUpdateAccess hook
+
+1.10.0 Sample integration of processDatamap_checkRecordUpdateAccess hook
 
 ## Installation
 
