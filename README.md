@@ -18,6 +18,8 @@
 
 1.7.0 Sample integration of processDatamap_postProcessFieldArray hook
 
+1.8.0 Sample integration of processDatamap_afterDatabaseOperations hook
+
 ## Installation
 
 Add via composer:
