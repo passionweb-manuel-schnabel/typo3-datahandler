@@ -21,19 +21,21 @@ class PostProcessFieldArrayHook
         if ($table === 'tx_data_handler_domain_model_codebreak') {
 
             if ($status === 'update') {
-                $this->generateInfoMessage("Updating Content with uid " . $id);
+                $m = $this->generateInfoMessage("Updating Content with uid " . $id);
 
             } else if ($status === 'new') {
                 $mstring = "Inserting new Codebreak.";
-                foreach ($fieldArray as $field)
-                    if (str_contains($field['description'], "Codebreak") || strlen($field['description']) < 20) {
-                        $this->generateInfoMessage($mstring);
-                    } else {
-                        $this->generateInfoMessage($mstring . " Please provide a informative, Codebreak related description");
-                    }
+                if (str_contains($fieldArray['description'], "Codebreak") || strlen($fieldArray['description']) < 20) {
+                    $m = $this->generateInfoMessage($mstring);
+                } else {
+                    $m = $this->generateInfoMessage($mstring . " Please provide a informative, Codebreak related description");
+                }
             } else {
-                $this->generateInfoMessage("Element with unknown status provided");
+                $m = $this->generateInfoMessage("Element with unknown status provided");
             }
+            $flashMessageService = GeneralUtility::makeInstance(FlashMessageService::class);
+            $messageQueue = $flashMessageService->getMessageQueueByIdentifier();
+            $messageQueue->addMessage($m);
         }
     }
 
