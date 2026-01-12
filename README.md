@@ -26,6 +26,8 @@
 
 1.11.0 Sample integration of processCmdmap_beforeStart hook
 
+1.12.0 Sample integration of processCmdmap_preProcess hook
+
 ## Installation
 
 Add via composer:

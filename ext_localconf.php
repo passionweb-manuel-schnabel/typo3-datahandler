@@ -23,3 +23,6 @@ ExtensionUtility::configurePlugin(
 
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass']['BeforeStart'] =
     \Passionweb\DataHandler\Hooks\DataHandler\ProcessCmdmap\BeforeStartHook::class;
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass']['PreProcess'] =
+    \Passionweb\DataHandler\Hooks\DataHandler\ProcessCmdmap\PreProcessHook::class;
