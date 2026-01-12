@@ -30,6 +30,8 @@
 
 1.13.0 Sample integration of processCmdmap hook
 
+1.14.0 Sample integration of processCmdmap_deleteAction hook
+
 ## Installation
 
 Add via composer:
