@@ -15,8 +15,8 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class ProcessCmdmapHook
 {
     /**
-     * The hook "ProcessCmdmap_preProcess" will be called in vendor/typo3/cms-core/Classes/DataHandling/DataHandler.php
-     * line 3346 (TYPO3 13.4.20), search for "ProcessCmdmap_preProcess"
+     * The hook "processCmdmap" will be called in vendor/typo3/cms-core/Classes/DataHandling/DataHandler.php
+     * line 3346 (TYPO3 13.4.20), search for "processCmdmap"
      */
     public function processCmdmap($command, $table, $id, $value, &$commandIsProcessed, DataHandler $dataHandler): void
     {
