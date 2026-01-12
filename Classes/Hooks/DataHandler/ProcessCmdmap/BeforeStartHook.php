@@ -28,10 +28,9 @@ class BeforeStartHook
         $flashMessageService = GeneralUtility::makeInstance(FlashMessageService::class);
         $messageQueue = $flashMessageService->getMessageQueueByIdentifier(FlashMessageQueue::NOTIFICATION_QUEUE);
         if (array_key_exists('tt_content', $dataHandler->cmdmap)) {
-            foreach ($dataHandler->cmdmap['tt_content'] as $elem) {
-                $origin = array_key_first($elem);
-                $action = $elem[$origin]["action"];
-                $message = $this->generateDebugMessage('Executing action *' . $action . '* after using action *' . $origin . '*');
+            foreach ($dataHandler->cmdmap['tt_content'] as $uid => $elem) {
+                $action = array_key_first($elem);
+                $message = $this->generateDebugMessage('Executing action *' . $action . '* on page with uid ' . $uid);
                 $messageQueue->addMessage($message);
             }
         } else if (array_key_exists('pages', $dataHandler->cmdmap)) {
@@ -41,7 +40,7 @@ class BeforeStartHook
                 $messageQueue->addMessage($message);
             }
         } else {
-            $message = $this->generateDebugMessage('Executing action for non tt-content entry');
+            $message = $this->generateDebugMessage('Executing action for other entry');
             $messageQueue->addMessage($message);
         }
     }
