@@ -24,6 +24,8 @@
 
 1.10.0 Sample integration of processDatamap_afterAllOperations hook
 
+1.11.0 Sample integration of processCmdmap_beforeStart hook
+
 ## Installation
 
 Add via composer:
