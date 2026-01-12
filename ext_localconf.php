@@ -26,3 +26,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['proc
 
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass']['PreProcess'] =
     \Passionweb\DataHandler\Hooks\DataHandler\ProcessCmdmap\PreProcessHook::class;
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass']['ProcessCmdmap'] =
+    \Passionweb\DataHandler\Hooks\DataHandler\ProcessCmdmap\ProcessCmdmapHook::class;
