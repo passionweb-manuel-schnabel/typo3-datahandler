@@ -38,6 +38,8 @@
 
 1.17.0 Sample integration of processCmdmap_afterFinish hook
 
+1.18.0 Sample integration of processTranslateTo_copyAction hook
+
 ## Installation
 
 Add via composer:
