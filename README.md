@@ -36,6 +36,8 @@
 
 1.16.0 Sample integration of processCmdmap_postProcess hook
 
+1.17.0 Sample integration of processCmdmap_afterFinish hook
+
 ## Installation
 
 Add via composer:

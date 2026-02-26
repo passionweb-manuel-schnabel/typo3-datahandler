@@ -20,5 +20,5 @@ ExtensionUtility::configurePlugin(
 /**
  * DataHandler processCmdmap hooks
  */
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass']['PostProcess'] =
-    \Passionweb\DataHandler\Hooks\DataHandler\ProcessCmdmap\PostProcessCmdmapHook::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processCmdmapClass']['AfterFinish'] =
+    \Passionweb\DataHandler\Hooks\DataHandler\ProcessCmdmap\AfterFinishHook::class;
