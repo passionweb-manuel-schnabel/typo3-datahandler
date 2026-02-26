@@ -1,0 +1,19 @@
+TCEFORM {
+    tt_content {
+        frame_layout {
+            types {
+                text {
+                    addItems {
+                        101 = Special Frame
+                    }
+                }
+
+                header {
+                    addItems {
+                        101 = Special Frame
+                    }
+                }
+            }
+        }
+    }
+}
