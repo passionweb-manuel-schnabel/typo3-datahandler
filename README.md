@@ -34,6 +34,8 @@
 
 1.15.0 Sample integration of processCmdmap_discardAction hook
 
+1.15.0 Sample integration of processCmdmap_postProcess hook
+
 ## Installation
 
 Add via composer:
