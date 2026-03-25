@@ -1,0 +1,46 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>General Settings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+
+                <el>
+                    <settings.category>
+                        <label>Category</label>
+                        <description>Select category "A" to unlock the "Enable Feature" option below.</description>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items>
+                                <numIndex index="0">
+                                    <label>Category A</label>
+                                    <value>A</value>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <label>Category B</label>
+                                    <value>B</value>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <label>Category C</label>
+                                    <value>C</value>
+                                </numIndex>
+                            </items>
+                        </config>
+                    </settings.category>
+
+                    <settings.enableFeature>
+                        <label>Enable Feature</label>
+                        <description>Only allowed when category "A" is selected. Will be reset automatically otherwise.</description>
+                        <config>
+                            <type>check</type>
+                        </config>
+                    </settings.enableFeature>
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

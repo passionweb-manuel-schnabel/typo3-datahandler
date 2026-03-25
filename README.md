@@ -42,6 +42,8 @@
 
 1.19.0 Sample integration of checkModifyAccessList hook
 
+1.20.0 Sample integration of checkFlexFormValue hook
+
 ## Installation
 
 Add via composer:
