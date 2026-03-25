@@ -44,6 +44,8 @@
 
 1.20.0 Sample integration of checkFlexFormValue hook
 
+1.21.0 Sample integration of moveRecord hook moveRecord action
+
 ## Installation
 
 Add via composer:

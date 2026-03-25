@@ -18,7 +18,7 @@ ExtensionUtility::configurePlugin(
 );
 
 /**
- * DataHandler processCmdmap hooks
+ * DataHandler moveRecord hooks
  */
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['checkFlexFormValue']['before_merge'] =
-    \Passionweb\DataHandler\Hooks\DataHandler\CheckFlexFormValueHook::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['moveRecordClass'][] =
+    \Passionweb\DataHandler\Hooks\DataHandler\MoveRecordHook::class;
