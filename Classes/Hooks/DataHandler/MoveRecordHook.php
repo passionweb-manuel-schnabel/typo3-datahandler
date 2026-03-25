@@ -47,6 +47,33 @@ class MoveRecordHook
         ]);
     }
 
+    /**
+     * Called AFTER the record was moved as the first element on a page
+     * (destination >= 0, line ~4716 in TYPO3 13.4).
+     *
+     * @param string $table Table name
+     * @param int $uid UID of the moved record
+     * @param int $destinationPid Target page ID
+     * @param array $moveRec Move record properties
+     * @param array $updateFields Fields that were updated (pid, sorting, tstamp)
+     * @param DataHandler $dataHandler The DataHandler instance
+     */
+    public function moveRecord_firstElementPostProcess(
+        string $table,
+        int $uid,
+        int $destinationPid,
+        array $moveRec,
+        array $updateFields,
+        DataHandler $dataHandler,
+    ): void {
+        $this->generateInfoMessage('Record moved as first element on page! ', [
+            'table' => $table,
+            'uid' => $uid,
+            'targetPid' => $destinationPid,
+            'updatedFields' => implode(", ", $updateFields),
+        ]);
+    }
+
     private function generateInfoMessage(string $message, array $params = [])
     {
         $symbol = ": ";
@@ -60,9 +87,8 @@ class MoveRecordHook
         );
 
         $infoMessage = GeneralUtility::makeInstance(FlashMessage::class,
-            $message . $info, "", ContextualFeedbackSeverity::WARNING, true
+            $message . $info, "", ContextualFeedbackSeverity::INFO, true
         );
-
 
         $flashMessageService = GeneralUtility::makeInstance(FlashMessageService::class);
         $messageQueue = $flashMessageService->getMessageQueueByIdentifier();

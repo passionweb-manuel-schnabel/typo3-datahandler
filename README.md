@@ -46,6 +46,8 @@
 
 1.21.0 Sample integration of moveRecord hook moveRecord action
 
+1.22.0 Sample integration of moveRecord hook moveRecord to first position action
+
 ## Installation
 
 Add via composer:
