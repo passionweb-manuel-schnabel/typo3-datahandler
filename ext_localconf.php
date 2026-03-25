@@ -20,5 +20,5 @@ ExtensionUtility::configurePlugin(
 /**
  * DataHandler processCmdmap hooks
  */
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processTranslateToClass']['copy'] =
-    \Passionweb\DataHandler\Hooks\DataHandler\ProcessTranslateToCopyHook::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['checkModifyAccessList']['2'] =
+    \Passionweb\DataHandler\Hooks\DataHandler\CheckModifyAccessListHook::class;

@@ -40,6 +40,8 @@
 
 1.18.0 Sample integration of processTranslateTo_copyAction hook
 
+1.19.0 Sample integration of checkModifyAccessList hook
+
 ## Installation
 
 Add via composer:
