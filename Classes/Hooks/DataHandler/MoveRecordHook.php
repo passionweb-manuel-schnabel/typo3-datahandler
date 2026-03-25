@@ -74,6 +74,36 @@ class MoveRecordHook
         ]);
     }
 
+    /**
+     * Called AFTER the record was moved after another record
+     * (destination < 0, line ~4723 in TYPO3 13.4).
+     *
+     * @param string $table Table name
+     * @param int $uid UID of the moved record
+     * @param int $destinationPid Resolved target page ID
+     * @param int $origDestination Original negative destination UID
+     * @param array $moveRec Move record properties
+     * @param array $updateFields Fields that were updated
+     * @param DataHandler $dataHandler The DataHandler instance
+     */
+    public function moveRecord_afterAnotherElementPostProcess(
+        string $table,
+        int $uid,
+        int $destinationPid,
+        int $origDestination,
+        array $moveRec,
+        array $updateFields,
+        DataHandler $dataHandler,
+    ): void {
+        $this->generateInfoMessage('Record moved after another element ', [
+            'table' => $table,
+            'uid' => $uid,
+            'targetPid' => $destinationPid,
+            'afterRecordUid' => abs($origDestination),
+            'updatedFields' => $updateFields,
+        ]);
+    }
+
     private function generateInfoMessage(string $message, array $params = [])
     {
         $symbol = ": ";
